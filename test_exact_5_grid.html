@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>✅ Test Exact 5 Items Grid</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; padding: 20px; line-height: 1.6; }
+        .container { max-width: 1200px; margin: 0 auto; }
+        h1 { color: #2c3e50; text-align: center; margin-bottom: 30px; }
+        .success { background: #d4edda; color: #155724; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #28a745; }
+        .info { background: #cce5ff; color: #004085; padding: 20px; border-radius: 10px; margin: 15px 0; border-left: 5px solid #007bff; }
+        
+        /* Demo grid implementation */
+        .demo-grid { margin: 20px 0; padding: 20px; background: #f8f9fa; border-radius: 10px; }
+        .row { display: block; width: 100%; }
+        .row:after { content: ""; display: table; clear: both; }
+        
+        .custom-5-grid {
+            float: left;
+            padding-right: 15px;
+            padding-left: 15px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive rules */
+        @media (min-width: 1200px) {
+            .custom-5-grid { width: 20%; }
+            .custom-5-grid:nth-child(5n+1) { clear: left; }
+        }
+        
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .custom-5-grid { width: 25%; }
+            .custom-5-grid:nth-child(4n+1) { clear: left; }
+        }
+        
+        @media (min-width: 768px) and (max-width: 991px) {
+            .custom-5-grid { width: 33.33%; }
+            .custom-5-grid:nth-child(3n+1) { clear: left; }
+        }
+        
+        @media (max-width: 767px) {
+            .custom-5-grid { width: 50%; }
+            .custom-5-grid:nth-child(2n+1) { clear: left; }
+        }
+        
+        .demo-book {
+            background: white;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .book-cover {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 3px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .test-link { 
+            display: inline-block; 
+            background: #007bff; 
+            color: white; 
+            padding: 12px 20px; 
+            text-decoration: none; 
+            border-radius: 6px; 
+            margin: 10px 5px;
+            transition: background 0.3s;
+        }
+        .test-link:hover { background: #0056b3; color: white; }
+        
+        .grid-explanation { background: #f8f9fa; padding: 20px; border-radius: 10px; margin: 20px 0; }
+        .grid-explanation table { width: 100%; border-collapse: collapse; margin: 10px 0; }
+        .grid-explanation th, .grid-explanation td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        .grid-explanation th { background: #e9ecef; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 TEST EXACT 5 ITEMS GRID</h1>
+        
+        <div class="success">
+            <strong>✅ CUSTOM GRID SYSTEM IMPLEMENTED!</strong><br>
+            Grid sekarang menggunakan CSS custom untuk menampilkan <strong>tepat 5 item per baris</strong> di desktop.
+        </div>
+        
+        <div class="info">
+            <strong>🔧 TECHNICAL CHANGES:</strong><br>
+            ✅ Mengganti Bootstrap col-lg-2 dengan custom CSS<br>
+            ✅ Width: 20% untuk desktop (100% ÷ 5 = 20%)<br>
+            ✅ Float system dengan nth-child clear fix<br>
+            ✅ Box-sizing: border-box untuk akurasi<br>
+        </div>
+        
+        <h2>📊 LIVE DEMO - 5 ITEMS PER ROW:</h2>
+        
+        <div class="demo-grid">
+            <div class="row">
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">1</div>
+                        <h6>Book 1</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 50.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">2</div>
+                        <h6>Book 2</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 75.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">3</div>
+                        <h6>Book 3</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 65.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">4</div>
+                        <h6>Book 4</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 80.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">5</div>
+                        <h6>Book 5</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 70.000</p>
+                    </div>
+                </div>
+                
+                <!-- Second row -->
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">6</div>
+                        <h6>Book 6</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 90.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">7</div>
+                        <h6>Book 7</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 55.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">8</div>
+                        <h6>Book 8</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 85.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">9</div>
+                        <h6>Book 9</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 95.000</p>
+                    </div>
+                </div>
+                <div class="custom-5-grid">
+                    <div class="demo-book">
+                        <div class="book-cover">10</div>
+                        <h6>Book 10</h6>
+                        <p style="color: #e74c3c; font-weight: bold;">Rp 60.000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid-explanation">
+            <h3>📱 RESPONSIVE BEHAVIOR:</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Screen Size</th>
+                        <th>CSS Width</th>
+                        <th>Items per Row</th>
+                        <th>Visual Layout</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>🖥️ Desktop (≥1200px)</td>
+                        <td><code>width: 20%</code></td>
+                        <td><strong>5 items</strong></td>
+                        <td>■ ■ ■ ■ ■</td>
+                    </tr>
+                    <tr>
+                        <td>💻 Tablet (992-1199px)</td>
+                        <td><code>width: 25%</code></td>
+                        <td><strong>4 items</strong></td>
+                        <td>■ ■ ■ ■</td>
+                    </tr>
+                    <tr>
+                        <td>📋 Small (768-991px)</td>
+                        <td><code>width: 33.33%</code></td>
+                        <td><strong>3 items</strong></td>
+                        <td>■ ■ ■</td>
+                    </tr>
+                    <tr>
+                        <td>📱 Mobile (<768px)</td>
+                        <td><code>width: 50%</code></td>
+                        <td><strong>2 items</strong></td>
+                        <td>■ ■</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <h2>🔗 Test Live Pages:</h2>
+        <div style="text-align: center;">
+            <a href="http://localhost:8000/buku_baru" class="test-link" target="_blank">📚 Buku Baru</a>
+            <a href="http://localhost:8000/flash_sale" class="test-link" target="_blank">🔥 Flash Sale</a>
+            <a href="http://localhost:8000/buku_populer" class="test-link" target="_blank">🌟 Buku Populer</a>
+            <a href="http://localhost:8000/ebook" class="test-link" target="_blank">📱 Ebook</a>
+            <a href="http://localhost:8000/buku_terlaris" class="test-link" target="_blank">🏆 Buku Terlaris</a>
+        </div>
+        
+        <div class="success">
+            <h3>✨ IMPLEMENTASI BERHASIL:</h3>
+            <ul style="margin: 10px 0; padding-left: 20px;">
+                <li>✅ <strong>Desktop:</strong> Tepat 5 item per baris (20% width)</li>
+                <li>✅ <strong>Tablet:</strong> 4 item per baris (25% width)</li>
+                <li>✅ <strong>Small:</strong> 3 item per baris (33.33% width)</li>
+                <li>✅ <strong>Mobile:</strong> 2 item per baris (50% width)</li>
+                <li>✅ <strong>nth-child clear:</strong> Fix untuk baris yang sempurna</li>
+                <li>✅ <strong>Box-sizing:</strong> Border-box untuk akurasi ukuran</li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center; margin: 30px 0;">
+            <h2>🎯 EXACT 5-ITEM GRID AKTIF!</h2>
+            <p style="font-size: 18px; color: #28a745; font-weight: bold;">
+                Layout sekarang menampilkan tepat 5 buku per baris! 📚✨
+            </p>
+        </div>
+        
+        <div class="info">
+            <strong>📋 RESIZE BROWSER WINDOW</strong> untuk melihat responsive behavior dalam action!
+        </div>
+    </div>
+</body>
+</html>
